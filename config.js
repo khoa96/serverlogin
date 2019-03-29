@@ -1,0 +1,4 @@
+module.exports = {
+    secret: 'jsonwentoken',
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOWRiOTZiMDY5ZTA3MDgwOWY2MjY4MCIsImVtYWlsIjoibmd1eWVudmFuZkBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE1NTM4NTAyNjAsImV4cCI6MTU1Mzg1MTcwMH0.DnXeAn80YxdW8DSh4du9kY91R7l4idGFjWvpX9QjlSM'
+}
