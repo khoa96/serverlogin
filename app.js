@@ -6,8 +6,10 @@ var logger = require('morgan');
 var config = require('./config.js');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+const cors = require('cors');
 var app = express();
+app.use(cors());
+app.options('*', cors());
 // connect to mongoose mlab
 const mongoose = require('mongoose');
 const db = "mongodb://abc:khoanguyen96@ds143532.mlab.com:43532/node_mongoose";
