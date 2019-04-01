@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 const objectId = mongoose.Schema.Types.ObjectId;
 
 const userLoginSchema = new Schema({
+    username: {
+        type: String,
+        required: true
+    },
     email: {
         type: String,
         required: true

@@ -107,6 +107,20 @@ router.post('/api/authencation', function (req, res, next) {
   })
 })
 
+// api them 1 users vao db. ==> route nay se dc goi khi create dang ki tai khoan
+router.post("/api/users", function(req, res, next) {
+  const data = req.body;
+  UserLogin.insertMany([data], function(err, user) { 
+    if (err) {
+      res.status(400).json({
+        success: false,
+        message: "insert user to server failse"
+      })
+    } else {
+      res.json(user)
+    }
+  })
+})
 module.exports = router;
 // token cho user ( nguuyenvanf@gmail.com , password = 1234)
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjOWRiOTZiMDY5ZTA3MDgwOWY2MjY4MCIsImVtYWlsIjoibmd1eWVudmFuZkBnbWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE1NTM4NTAyNjAsImV4cCI6MTU1Mzg1MTcwMH0.DnXeAn80YxdW8DSh4du9kY91R7l4idGFjWvpX9QjlSM
